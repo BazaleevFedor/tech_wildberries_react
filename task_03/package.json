@@ -1,0 +1,11 @@
+{
+  "name": "task_03",
+  "version": "1.0.0",
+  "description": "Задание № 3",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node main.js"
+  },
+  "keywords": [],
+  "author": "Fedor Bazaleev"
+}
