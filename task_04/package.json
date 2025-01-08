@@ -1,0 +1,14 @@
+{
+  "name": "task_04",
+  "version": "1.0.0",
+  "description": "Задание № 4",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node main.js"
+  },
+  "keywords": [],
+  "author": "Fedor Bazaleev",
+  "devDependencies": {
+    "@types/uuid": "^10.0.0"
+  }
+}
