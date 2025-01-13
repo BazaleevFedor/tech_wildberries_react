@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #fdfdfd;
+    --background-button: #3573ee;
+    --background-menu-item-hover: #c2d6fc;
+    --priority-normal: #3f9500;
+    --priority-minor: #4c4c4c;
+    --priority-major: #006fe2;
+    --blue: #3573ee;
+    --gray: #D3D5DB;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* ToDo если будет не лень */
+    :root {
+        --foreground: #27282e;
+        --background: #fdfdfd;
+        --background-button: #3573ee;
+        --background-menu-item-hover: #c2d6fc;
+        --priority-normal: #3f9500;
+        --priority-minor: #4c4c4c;
+        --priority-major: #006fe2;
+        --blue: #3573ee;
+        --gray: #D3D5DB;
+    }
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer {
+    display: flex;
+    padding: 25px;
+    gap: 8px;
+}
+
+.footer__title {
+    font-size: 1.5rem;
+    margin: auto 0;
+}
+
+.footer__create-task-btn {
+    display: flex;
+    color: var(--background);
+    height: 24px;
+    background-color: var(--background-button);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto 0 auto auto;
+    padding: 0 8px;
+}
+
+.footer__create-board-btn {
+    display: flex;
+    color: var(--background);
+    height: 24px;
+    background-color: var(--background-button);
+    border-radius: 4px;
+    cursor: pointer;
+    margin: auto 0 auto;
+    padding: 0 8px;
+}
+
+.search {
+    display: flex;
+    height: 32px;
+    border: 1px solid var(--gray);
+    margin: 8px 32px;
+    border-radius: 4px;
+}
+
+.search:hover {
+    border: 1px solid var(--blue);
+}
+
+.search__board-list-btn {
+    display: flex;
+    padding: 0 10px 0 16px;
+    gap: 8px;
+    color: var(--background);
+    background-color: var(--blue);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.search__input {
+    outline: none;
+    flex-grow: 1;
+    padding: 0 8px;
+}
+
+.search__btn {
+    margin: auto 8px auto auto;
+}
+
+.search__ring {
+    color: var(--background);
+    margin: auto;
+}
