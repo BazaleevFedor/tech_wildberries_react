@@ -56,6 +56,11 @@ body {
     padding: 0 8px;
 }
 
+.disabled {
+    opacity: 0.8;
+    cursor: auto;
+}
+
 .footer__create-board-btn {
     display: flex;
     color: var(--background);
@@ -69,6 +74,7 @@ body {
 
 .search {
     display: flex;
+    position: relative;
     height: 32px;
     border: 1px solid var(--gray);
     margin: 8px 32px;
@@ -88,6 +94,15 @@ body {
     border-radius: 4px;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+    width: 160px;
+}
+
+.board-list-btn__text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: auto auto auto 4px;
 }
 
 .search__input {
@@ -102,5 +117,176 @@ body {
 
 .search__ring {
     color: var(--background);
-    margin: auto;
+    margin: auto 4px;
+}
+
+.search__board-list {
+    position: absolute;
+    top: 120%;
+    left: 0;
+
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2),0 1px 2px rgba(0, 0, 0, 0.19);
+    color: var(--priority-minor);
+
+    border: 1px solid var(--priority-major);
+    border-radius: 4px;
+    padding: 4px;
+    background-color: aliceblue;
+}
+
+.board-list__item {
+    margin: 2px;
+    padding: 0 4px;
+}
+
+.board-list__item:hover {
+    background-color: #3573ee;
+    border-radius: 4px;
+}
+
+.board {
+    margin: 8px 32px;
+    height: calc(100vh - 180px);
+}
+
+.board__columns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 10px;
+    height: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 200px;
+    border: 1px solid var(--priority-major);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.column__tasks {
+    display: grid;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.task {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100px;
+
+    border: 1px solid var(--priority-major);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.task__id {
+    color: var(--blue);
+    margin-right: 8px;
+}
+
+.task__name {
+    font-size: 12px;
+}
+
+.task__priority {
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+}
+
+.task__priority--minor {
+    color: var(--priority-minor);
+}
+
+.task__priority--normal {
+    color: var(--priority-normal);
+}
+
+.task__priority--major {
+    color: var(--priority-major);
+}
+
+.task:hover {
+    border: 2px solid var(--blue);
+    cursor: pointer;
+}
+
+.popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    display: flex;
+    position: relative;
+    width: 500px;
+    height: 400px;
+    flex-direction: column;
+    background-color: var(--background);
+    border-radius: 6px;
+    padding: 8px;
+    gap: 4px
+}
+
+.popup__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid var(--priority-major);
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.popup__text {
+    margin-right: auto;
+}
+
+.popup__btn-create {
+    display: flex;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 4px 16px 4px 16px;
+    gap: 8px;
+    color: var(--background);
+    background-color: var(--blue);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__btn-create:hover {
+    opacity: 0.8;
+}
+
+.popup__btn-trash {
+    display: flex;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+}
+
+.popup__btn-trash:hover {
+    opacity: 0.8;
+}
+
+.popup__input {
+    width: 70%;
+    background-color: rgba(76, 76, 76, 0.1);
+    border-radius: 4px;
 }
